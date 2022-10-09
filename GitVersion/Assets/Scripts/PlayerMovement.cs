@@ -66,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         MyInput();
-        Look();
     }
 
     /// <summary>
@@ -80,10 +79,10 @@ public class PlayerMovement : MonoBehaviour
         crouching = Input.GetKey(KeyCode.LeftControl);
 
         //Crouching
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-            StartCrouch();
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-            StopCrouch();
+        //if (Input.GetKeyDown(KeyCode.LeftControl))
+            //StartCrouch();
+       // if (Input.GetKeyUp(KeyCode.LeftControl))
+            //StopCrouch();
     }
 
     private void StartCrouch()
