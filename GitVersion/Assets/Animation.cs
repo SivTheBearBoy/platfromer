@@ -1,0 +1,84 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Animation : MonoBehaviour
+{
+
+    Animator anim;
+
+    public float coolDownTime = 1;
+    private float nextFireTime = 0f;
+    public static int no0fClicks = 0;
+    float lastClickedTime = 0;
+    Vector3 pivotPoint = new Vector3 (-3.5f,0,0);
+    private float turn;
+    public
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        anim = GetComponent<Animator> ();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Movment Animation
+        anim.SetInteger("Condition", 0);
+        if  (Input.GetKey (KeyCode.D))
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            anim.SetInteger("Condition", 1);
+        }
+        else if (Input.GetKey (KeyCode.A))
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            anim.SetInteger("Condition", 1);
+        }
+        
+
+
+        //Crouch animation
+        if  (Input.GetKeyDown (KeyCode.LeftControl))
+        {
+            anim.SetBool("isCrouching", true);
+        }
+        if  (Input.GetKeyUp (KeyCode.LeftControl))
+        {
+            anim.SetBool("isCrouching", false);
+        }
+
+
+        //Attack Animation
+        if (Time.time - lastClickedTime > coolDownTime)
+        {
+            no0fClicks = 0;
+            anim.SetInteger("Attack", 0);
+        }
+        if (Time.time > nextFireTime && Input.GetMouseButtonDown(0))
+        {
+            OnClick();
+        }
+
+    }
+    
+    //Attack combo
+    void OnClick()
+    {
+        lastClickedTime = Time.time;
+        no0fClicks++;
+        if(no0fClicks == 1 )
+        {
+            anim.SetInteger("Attack", 1);
+        }
+        else if(no0fClicks == 2 )
+        {
+            anim.SetInteger("Attack", 2);
+        }
+        else if(no0fClicks == 3 )
+        {
+            anim.SetInteger("Attack", 3);
+        }
+    }
+}
