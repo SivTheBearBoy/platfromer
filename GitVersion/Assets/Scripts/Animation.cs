@@ -11,6 +11,11 @@ public class Animation : MonoBehaviour
     private float nextFireTime = 0f;
     public static int no0fClicks = 0;
     float lastClickedTime = 0;
+
+    [SerializeField] public bool isGrounded = false;
+    [SerializeField] private float groundCheckDistance;
+    [SerializeField] private LayerMask groundMask;
+
     Vector3 pivotPoint = new Vector3 (-3.5f,0,0);
     private float turn;
     public
@@ -24,6 +29,7 @@ public class Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
         //Movment Animation
         anim.SetInteger("Condition", 0);
         if  (Input.GetKey (KeyCode.D))
@@ -35,6 +41,17 @@ public class Animation : MonoBehaviour
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             anim.SetInteger("Condition", 1);
+        }
+
+        //Jump Animation
+        if (isGrounded == true)
+        {
+            anim.SetBool("inAir", false);
+        }
+        
+        if(Input.GetButtonDown("Jump") && isGrounded == true)
+        {
+            anim.SetBool("inAir", true);
         }
         
 
