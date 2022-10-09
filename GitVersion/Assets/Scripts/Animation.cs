@@ -44,12 +44,9 @@ public class Animation : MonoBehaviour
         }
 
         //Jump Animation
-        if (isGrounded == true)
-        {
-            anim.SetBool("inAir", false);
-        }
+        anim.SetBool("inAir", false);
         
-        if(Input.GetButtonDown("Jump") && isGrounded == true)
+        if(Input.GetButtonDown("Jump"))
         {
             anim.SetBool("inAir", true);
         }
