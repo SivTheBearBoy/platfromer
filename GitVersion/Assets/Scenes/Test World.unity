@@ -604,7 +604,7 @@ MonoBehaviour:
   groundCheckDistance: 0
   groundMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
 --- !u!95 &1567952104
 Animator:
   serializedVersion: 4
