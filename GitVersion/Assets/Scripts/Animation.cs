@@ -34,21 +34,31 @@ public class Animation : MonoBehaviour
         anim.SetInteger("Condition", 0);
         if  (Input.GetKey (KeyCode.D))
         {
+            if (Input.GetKey (KeyCode.LeftShift))
+            {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            anim.SetInteger("Condition", 2);
+            }
+            else
+            {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
             anim.SetInteger("Condition", 1);
+            }
         }
         else if (Input.GetKey (KeyCode.A))
         {
+            if (Input.GetKey (KeyCode.LeftShift))
+            {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            anim.SetInteger("Condition", 2);
+            }
+            else
+            {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             anim.SetInteger("Condition", 1);
+            }
         }
 
-
-        if  (Input.GetKey (KeyCode.LeftShift))
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-            anim.SetInteger("Condition", 2);
-        }
         //Jump Animation
         anim.SetBool("inAir", false);
         
