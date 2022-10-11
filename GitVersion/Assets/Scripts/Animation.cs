@@ -48,11 +48,11 @@ public class Animation : MonoBehaviour
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
             anim.SetInteger("Condition", 2);
-
+        }
         //Jump Animation
         anim.SetBool("inAir", false);
         
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             anim.SetBool("inAir", true);
         }
