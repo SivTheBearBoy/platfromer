@@ -545,6 +545,8 @@ MonoBehaviour:
   slideForce: 400
   slideCounterMovement: 0.2
   jumpForce: 400
+  maxSprintSpeed: 40
+  moveSprintSpeed: 9000
 --- !u!1 &1479707834
 GameObject:
   m_ObjectHideFlags: 0

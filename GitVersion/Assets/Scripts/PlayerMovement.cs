@@ -45,6 +45,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 normalVector = Vector3.up;
     private Vector3 wallNormalVector;
 
+    //Sprint
+    public float maxSprintSpeed = 40;
+    public float moveSprintSpeed = 9000;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -122,6 +126,30 @@ public class PlayerMovement : MonoBehaviour
         //Set max speed
         float maxSpeed = this.maxSpeed;
 
+        //Sprint
+        if (Input.GetKey(KeyCode.LeftShift) && grounded)
+
+        {
+            maxSpeed = maxSprintSpeed;
+            moveSpeed = moveSprintSpeed;
+            sprinting = true;
+        }
+        else
+
+        {
+            maxSpeed = maxSpeed;
+            moveSpeed = moveSpeed;
+            sprinting = false;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            maxSpeed = 20;
+            moveSpeed = 4500;
+            sprinting = false;
+        }
+
+
+
         //If sliding down a ramp, add force down so player stays grounded and also builds speed
         if (crouching && grounded && readyToJump)
         {
@@ -177,6 +205,11 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+    private void sprint()
+    {
+        
     }
 
     private float desiredX;
