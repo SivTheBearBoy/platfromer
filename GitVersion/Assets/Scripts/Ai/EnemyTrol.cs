@@ -8,6 +8,8 @@
  
     Animator anim;
 
+    public int health;
+
      public Transform Player;
      public int MoveSpeed = 4;
      public int MaxDist = 40;
@@ -21,13 +23,7 @@
      void Update()
      {
          transform.LookAt(Player);
- 
-            if (gameObject.transform.position.x > Player.position.x) {
-                //als enemy rechts is.
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-            } else {
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
+
          if (Vector3.Distance(transform.position, Player.position) >= MinDist)
          {
  
