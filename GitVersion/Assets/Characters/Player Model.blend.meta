@@ -64,7 +64,7 @@ ModelImporter:
       takeName: GoblinAction
       internalID: 0
       firstFrame: 330
-      lastFrame: 359
+      lastFrame: 350
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -267,7 +267,7 @@ ModelImporter:
       takeName: GoblinAction
       internalID: 0
       firstFrame: 230
-      lastFrame: 240
+      lastFrame: 250
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

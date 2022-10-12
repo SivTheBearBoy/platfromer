@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d9369d139b9f4458cada50acae40e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDownTime: 1
+  coolDownTime: 0.5
   isGrounded: 1
   groundCheckDistance: 0
   groundMask:
