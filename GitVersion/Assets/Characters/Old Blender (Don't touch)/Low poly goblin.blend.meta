@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6db6a62b1f2334e4a89b7d1f11744fdd
+guid: cb9a32f59bdc7254fb7ea75c8cf8a40c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
@@ -7,11 +7,8 @@ ModelImporter:
       74: 1989289236423521904
     second: Default Take
   - first:
-      74: -3880581976594992817
-    second: ArmatureAction
-  - first:
-      74: -623603649343465320
-    second: Scene
+      74: -1757809531921740626
+    second: GoblinAction
   externalObjects: {}
   materials:
     materialImportMode: 2
