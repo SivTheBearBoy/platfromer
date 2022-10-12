@@ -24,7 +24,7 @@
      {
          transform.LookAt(Player);
 
-         if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+         if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
          {
  
              transform.position += transform.forward * MoveSpeed * Time.deltaTime;
