@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: cb9a32f59bdc7254fb7ea75c8cf8a40c
+guid: fe542415f18438b4c8316e8c10ccd479
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: 1989289236423521904
-    second: WalkGoblin
+    second: Open
   - first:
-      74: -1757809531921740626
-    second: IdleGoblin
+      74: 1007095770567677685
+    second: Close
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -39,18 +39,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: WalkGoblin
+      name: Open
       takeName: Default Take
       internalID: 0
-      firstFrame: 20
-      lastFrame: 59
+      firstFrame: 0
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -66,20 +66,20 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 19
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: IdleGoblin
-      takeName: GoblinAction
+      name: Close
+      takeName: Default Take
       internalID: 0
-      firstFrame: 80
-      lastFrame: 159
+      firstFrame: 30
+      lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -101,7 +101,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

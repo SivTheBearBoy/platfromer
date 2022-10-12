@@ -16,10 +16,6 @@ public class Animation : MonoBehaviour
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundMask;
 
-    Vector3 pivotPoint = new Vector3 (-3.5f,0,0);
-    private float turn;
-    public
-
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +32,12 @@ public class Animation : MonoBehaviour
         {
             if (Input.GetKey (KeyCode.LeftShift))
             {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
             anim.SetInteger("Condition", 2);
             }
             else
             {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
             anim.SetInteger("Condition", 1);
             }
         }
@@ -49,12 +45,12 @@ public class Animation : MonoBehaviour
         {
             if (Input.GetKey (KeyCode.LeftShift))
             {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             anim.SetInteger("Condition", 2);
             }
             else
             {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             anim.SetInteger("Condition", 1);
             }
         }
