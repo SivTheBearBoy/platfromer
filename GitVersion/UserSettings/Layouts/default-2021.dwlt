@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 25
+  controlID: 81
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 99
+  controlID: 82
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 100
+  controlID: 83
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,8 +242,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 432.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -268,8 +268,8 @@ MonoBehaviour:
     y: 0
     width: 639.19995
     height: 432.8
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -374,10 +374,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1945.2}
-      m_SelectedIDs: 
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 80680000
       m_LastClickedID: 0
-      m_ExpandedIDs: 66eefeff9405ffff6a69ffffc49bffffc89bffff62d8ffff9ef2ffff1cfbffff
+      m_ExpandedIDs: 1cfbffff7e5f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -434,8 +434,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -100, y: -25.600006}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 24.8}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -626,9 +626,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 26.60513, y: 8.642644, z: -14.845579}
+    m_Target: {x: -7.913768, y: -2.8704522, z: 18.551645}
     speed: 2
-    m_Value: {x: 26.60513, y: 8.642644, z: -14.845579}
+    m_Value: {x: -7.913768, y: -2.8704522, z: 18.551645}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -675,20 +675,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.1644317, y: -0.13713755, z: 0.023136986, w: 0.97661746}
+    m_Target: {x: 0.15005799, y: -0.21153323, z: 0.032871906, w: 0.9653329}
     speed: 2
-    m_Value: {x: 0.16445296, y: -0.13566151, z: 0.022888465, w: 0.9767432}
+    m_Value: {x: 0.15004209, y: -0.21151082, z: 0.032868423, w: 0.96523064}
   m_Size:
-    m_Target: 1.652676
+    m_Target: 13.7084675
     speed: 2
-    m_Value: 1.7305508
+    m_Value: 13.7084675
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.0604701
-    m_SpeedNormalized: 0.53000003
+    m_Speed: 0.8805601
+    m_SpeedNormalized: 0.44000006
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -926,8 +926,7 @@ MonoBehaviour:
     m_SaveData: []
   m_SearchFilter:
     m_NameFilter: 
-    m_ClassNames:
-    - Material
+    m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
     m_VersionControlStates: []
@@ -936,37 +935,38 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 0
-    m_Folders: []
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Environment/Kouse kit
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Environment/Kouse kit
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\apmru\OneDrive\Documenten\GitHub\platfromer\GitVersion
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 01ca9a3b
-    m_LastClickedID: 1000000001
-    m_ExpandedIDs: 00000000365c0000385c000000ca9a3bffffff7f
+    m_SelectedIDs: 36680000
+    m_LastClickedID: 26678
+    m_ExpandedIDs: 00000000be640000c0640000d064000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Controllers
-      m_OriginalName: Controllers
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23864
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_SearchString: 
@@ -980,7 +980,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000365c0000385c0000
+    m_ExpandedIDs: 00000000be640000c0640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
