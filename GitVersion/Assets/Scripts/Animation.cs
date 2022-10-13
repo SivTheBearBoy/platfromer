@@ -27,17 +27,18 @@ public class Animation : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
         //Movment Animation
+        
         anim.SetInteger("Condition", 0);
         if  (Input.GetKey (KeyCode.D))
         {
             if (Input.GetKey (KeyCode.LeftShift))
             {
-            transform.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
+            transform.localScale = new Vector3(-0.24f, 0.16f, 0.24f);
             anim.SetInteger("Condition", 2);
             }
             else
             {
-            transform.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
+            transform.localScale = new Vector3(-0.24f, 0.16f, 0.24f);
             anim.SetInteger("Condition", 1);
             }
         }
@@ -45,12 +46,12 @@ public class Animation : MonoBehaviour
         {
             if (Input.GetKey (KeyCode.LeftShift))
             {
-            transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            transform.localScale = new Vector3(0.24f, 0.16f, 0.24f);
             anim.SetInteger("Condition", 2);
             }
             else
             {
-            transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            transform.localScale = new Vector3(0.24f, 0.16f, 0.24f);
             anim.SetInteger("Condition", 1);
             }
         }
