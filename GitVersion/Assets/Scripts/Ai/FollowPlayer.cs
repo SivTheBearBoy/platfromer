@@ -15,6 +15,7 @@ public class FollowPlayer : MonoBehaviour
 
     public int MaxDist = 40;
     public int MinDist = 1;
+    public int MinAttackDist = 2;
 
      void Start()
      {
@@ -24,7 +25,7 @@ public class FollowPlayer : MonoBehaviour
     void Update()
     {
         //Checkt of de player buiten de maximale afstand is
-        if (Vector3.Distance(transform.position, player.transform.position) <= MaxDist)
+        if (Vector3.Distance(transform.position, player.transform.position) <= MaxDist && (Vector3.Distance(transform.position, player.transform.position) >= MinDist))
         {
             Vector3 scale = transform.localScale;
             //Checkt welke kant de player is
@@ -42,7 +43,7 @@ public class FollowPlayer : MonoBehaviour
             transform.localScale = scale;
 
             //Check 
-            if (Vector3.Distance(transform.position, player.transform.position) <= MinDist + 1)
+            if (Vector3.Distance(transform.position, player.transform.position) <= MinAttackDist)
              {
                 //Voor aanvallen
                  anim.SetBool("Attacking", true);

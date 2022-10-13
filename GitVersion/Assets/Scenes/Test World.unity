@@ -525,7 +525,8 @@ MonoBehaviour:
   flip: 0
   speed: 2
   MaxDist: 5
-  MinDist: 0
+  MinDist: 1
+  MinAttackDist: 2
 --- !u!1 &1118841962
 GameObject:
   m_ObjectHideFlags: 0
