@@ -1,10 +1,10 @@
- using System.Collections;
- using System.Collections.Generic;
- using UnityEngine;
- using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
- public class EnemyTrol : MonoBehaviour
- {
+public class FollowPlayer : MonoBehaviour
+{
+    //Variable
     Animator anim;
 
     public GameObject player;
@@ -18,19 +18,23 @@
 
      void Start()
      {
+        //Animator een kortere naam geven
         anim = GetComponent<Animator> ();
      }
-    // Update is called once per frame
     void Update()
     {
+        //Checkt of de player buiten de maximale afstand is
         if (Vector3.Distance(transform.position, player.transform.position) <= MaxDist)
         {
             Vector3 scale = transform.localScale;
+            //Checkt welke kant de player is
             if(player.transform.position.x > transform.position.x)
             {
+                //Als Naar Links
                 scale.z = Mathf.Abs(scale.z) * -1 * (flip ? -1 : 1);
                 transform.Translate(0, 0 , speed * Time.deltaTime * -1);
             } else {
+                //Als naar rechts
                 scale.z = Mathf.Abs(scale.z) * (flip ? -1 : 1);
                 transform.Translate(0, 0 , speed * Time.deltaTime);
             }
@@ -40,10 +44,12 @@
             //Check 
             if (Vector3.Distance(transform.position, player.transform.position) <= MinDist + 1)
              {
+                //Voor aanvallen
                  anim.SetBool("Attacking", true);
              }
              else
              {
+                //Stoppen met aanvallen
                 anim.SetBool("Attacking", false);
              }
         }
