@@ -83,15 +83,14 @@ public class PlayerMovement : MonoBehaviour
         crouching = Input.GetKey(KeyCode.LeftControl);
 
         //Crouching
-        //if (Input.GetKeyDown(KeyCode.LeftControl))
-            //StartCrouch();
-       // if (Input.GetKeyUp(KeyCode.LeftControl))
-            //StopCrouch();
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+            StartCrouch();
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+            StopCrouch();
     }
 
     private void StartCrouch()
     {
-        transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         if (rb.velocity.magnitude > 0.5f)
         {
@@ -149,13 +148,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-
-        //If sliding down a ramp, add force down so player stays grounded and also builds speed
-        if (crouching && grounded && readyToJump)
-        {
-            rb.AddForce(Vector3.down * Time.deltaTime * 3000);
-            return;
-        }
 
         //If speed is larger than maxspeed, cancel out the input so you don't go over max speed
         if (x > 0 && xMag > maxSpeed) x = 0;
@@ -234,13 +226,6 @@ public class PlayerMovement : MonoBehaviour
     private void CounterMovement(float x, float y, Vector2 mag)
     {
         if (!grounded || jumping) return;
-
-        //Slow down sliding
-        if (crouching)
-        {
-            rb.AddForce(moveSpeed * Time.deltaTime * -rb.velocity.normalized * slideCounterMovement);
-            return;
-        }
 
         //Counter movement
         if (Mathf.Abs(mag.x) > threshold && Mathf.Abs(x) < 0.05f || (mag.x < -threshold && x > 0) || (mag.x > threshold && x < 0))
