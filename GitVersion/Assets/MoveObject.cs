@@ -44,7 +44,7 @@ public class MoveObject : MonoBehaviour
         private void OnTriggerExit(Collider other){
         if (other.tag == playerTag)
         {
-            Player.transform.parent = transform;
+            Player.transform.parent = null;
         }
     }
 }
