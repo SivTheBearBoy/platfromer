@@ -10,7 +10,7 @@ public class Respawn : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "MainBone"){
+        if(other.gameObject.name == "Player"){
             player.transform.position = respawnPoint.transform.position;
         }
     }
