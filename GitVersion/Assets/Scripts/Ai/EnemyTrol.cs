@@ -13,8 +13,8 @@
 
     public bool flip;
     public float damage = 5;
-    public float maxHealth = 3;
-    public float Currenthealth = 3;
+    public float maxHealth = 100;
+    public float Currenthealth = 100;
 
     public float speed;
 
@@ -32,7 +32,7 @@
     void Update()
     {
         //Checkt of de player buiten de maximale afstand is
-        if (Health >= 1)
+        if (Currenthealth >= 1)
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= MaxDist && (Vector3.Distance(transform.position, player.transform.position) >= MinDist))
             {
@@ -70,15 +70,15 @@
             m_Collider.enabled = false;
         }
     }
-    void OnTriggerStay(Collider other) 
-    {
-        if(other.CompareTag("player")) 
-        {
-            TakeDamage(3);
-        }
-    }
-    public void TakeDamage (Damage)
-    {
-        Currenthealth = Currenthealth - Damage;
-    }
+    // void OnTriggerStay(Collider other) 
+    // {
+    //     if(other.CompareTag("player")) 
+    //     {
+    //         TakeDamage(3);
+    //     }
+    // }
+    // public void TakeDamage (Damage)
+    // {
+    //     Currenthealth = Currenthealth - Damage;
+    // }
 }
