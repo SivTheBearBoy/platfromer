@@ -33,12 +33,12 @@ public class Animation : MonoBehaviour
         {
             if (Input.GetKey (KeyCode.LeftShift))
             {
-            transform.localScale = new Vector3(-0.24f, 0.16f, 0.24f);
+            transform.localScale = new Vector3(-0.2f, 0.27f, 0.2f);
             anim.SetInteger("Condition", 2);
             }
             else
             {
-            transform.localScale = new Vector3(-0.24f, 0.16f, 0.24f);
+            transform.localScale = new Vector3(-0.2f, 0.27f, 0.2f);
             anim.SetInteger("Condition", 1);
             }
         }
@@ -46,12 +46,12 @@ public class Animation : MonoBehaviour
         {
             if (Input.GetKey (KeyCode.LeftShift))
             {
-            transform.localScale = new Vector3(0.24f, 0.16f, 0.24f);
+            transform.localScale = new Vector3(0.2f, 0.27f, 0.2f);
             anim.SetInteger("Condition", 2);
             }
             else
             {
-            transform.localScale = new Vector3(0.24f, 0.16f, 0.24f);
+            transform.localScale = new Vector3(0.2f, 0.27f, 0.2f);
             anim.SetInteger("Condition", 1);
             }
         }
