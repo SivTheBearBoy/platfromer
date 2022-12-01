@@ -57,11 +57,13 @@ public class Animation : MonoBehaviour
         }
 
         //Jump Animation
-        anim.SetBool("inAir", false);
         
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKey (KeyCode.Space))
         {
             anim.SetBool("inAir", true);
+        }
+        else{
+            anim.SetBool("inAir", false);
         }
         
 

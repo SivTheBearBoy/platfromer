@@ -416,7 +416,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fly
-  m_Speed: 0.6
+  m_Speed: 2.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5992761346542824853}
@@ -649,16 +649,19 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: inAir
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4844734718758611619}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.24999988
-  m_TransitionOffset: 0.056147538
-  m_ExitTime: 0.94799334
+  m_TransitionDuration: 0.32402575
+  m_TransitionOffset: 0.27500978
+  m_ExitTime: 0.76643056
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -773,7 +776,7 @@ AnimatorStateMachine:
     m_Position: {x: 210, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4848841433477396617}
-    m_Position: {x: 400, y: 60, z: 0}
+    m_Position: {x: 390, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3028982462605099258}
     m_Position: {x: 440, y: -50, z: 0}

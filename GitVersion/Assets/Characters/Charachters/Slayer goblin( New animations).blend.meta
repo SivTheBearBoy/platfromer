@@ -263,8 +263,8 @@ ModelImporter:
       name: Fly
       takeName: Scene
       internalID: 0
-      firstFrame: 250
-      lastFrame: 260
+      firstFrame: 255
+      lastFrame: 290
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
