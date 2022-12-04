@@ -8,7 +8,7 @@ public class BackToMenu : MonoBehaviour
 
     public void LoadFirstScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
 
     void update(){
