@@ -70,15 +70,15 @@
             m_Collider.enabled = false;
         }
     }
-    // void OnTriggerStay(Collider other) 
-    // {
-    //     if(other.CompareTag("player")) 
-    //     {
-    //         TakeDamage(3);
-    //     }
-    // }
-    // public void TakeDamage (Damage)
-    // {
-    //     Currenthealth = Currenthealth - Damage;
-    // }
+     void OnTriggerStay(Collider other) 
+     {
+         if(other.tag == "Weapon") 
+         {
+             TakeDamage(damage);
+         }
+     }
+     public void TakeDamage (float HitDamage)
+     {
+         Currenthealth = Currenthealth - HitDamage;
+     }
 }

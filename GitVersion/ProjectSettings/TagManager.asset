@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Checkpoint
   - Enemy
+  - Weapon
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
