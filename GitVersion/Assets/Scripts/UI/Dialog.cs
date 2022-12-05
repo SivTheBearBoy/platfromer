@@ -59,7 +59,7 @@ public class Dialog : MonoBehaviour
         }
         else{
             gameObject.SetActive(false);
-            Player.GetComponent<PlayerMovement>().enabled = false;
+            Player.GetComponent<PlayerMovement>().enabled = true;
         }
     }
 }
