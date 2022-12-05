@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class NPCinteract : MonoBehaviour
 {
+    public GameObject Player;
+
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "Player"){
             transform.GetChild(0).gameObject.SetActive(true);
-            this.GetComponent<BoxCollider>().enabled=false;
+            Player.GetComponent<PlayerMovement>().enabled=false;
         }
     }
 }
