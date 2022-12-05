@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Animation : MonoBehaviour
 {
@@ -22,11 +23,21 @@ public class Animation : MonoBehaviour
         anim = GetComponent<Animator> ();
     }
 
+        public void LoadFirstScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
     // Update is called once per frame
     void Update()
     {
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
         //Movment Animation
+
+    if (Input.GetKeyDown (KeyCode.M)){
+       LoadFirstScene();
+       print("Yob");
+    }
         
         anim.SetInteger("Condition", 0);
         if  (Input.GetKey (KeyCode.D))
