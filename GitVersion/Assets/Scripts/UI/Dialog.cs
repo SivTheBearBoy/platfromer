@@ -57,7 +57,7 @@ public class Dialog : MonoBehaviour
             StartCoroutine(TypeLine());
         }
         else{
-            gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
