@@ -26,12 +26,6 @@ public class PlayerMovement : MonoBehaviour
     private float threshold = 0.01f;
     public float maxSlopeAngle = 35f;
 
-    //Crouch & Slide
-    private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
-    private Vector3 playerScale;
-    public float slideForce = 400;
-    public float slideCounterMovement = 0.2f;
-
     //Jumping
     private bool readyToJump = true;
     private float jumpCooldown = 0.25f;
@@ -39,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Input
     float x, y;
-    bool jumping, sprinting, crouching;
+    bool jumping, sprinting;
 
     //Sliding
     private Vector3 normalVector = Vector3.up;
@@ -56,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        playerScale = transform.localScale;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -80,32 +73,8 @@ public class PlayerMovement : MonoBehaviour
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
         jumping = Input.GetButton("Jump");
-        crouching = Input.GetKey(KeyCode.LeftControl);
-
-        //Crouching
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-            StartCrouch();
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-            StopCrouch();
     }
 
-    private void StartCrouch()
-    {
-        transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-        if (rb.velocity.magnitude > 0.5f)
-        {
-            if (grounded)
-            {
-                rb.AddForce(orientation.transform.forward * slideForce);
-            }
-        }
-    }
-
-    private void StopCrouch()
-    {
-        transform.localScale = playerScale;
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-    }
 
     private void Movement()
     {
@@ -136,8 +105,6 @@ public class PlayerMovement : MonoBehaviour
         else
 
         {
-            maxSpeed = maxSpeed;
-            moveSpeed = moveSpeed;
             sprinting = false;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -166,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Movement while sliding
-        if (grounded && crouching) multiplierV = 0f;
+        if (grounded) multiplierV = 0f;
 
         //Apply forces to move player
         rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
