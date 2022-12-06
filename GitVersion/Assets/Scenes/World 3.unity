@@ -59997,7 +59997,6 @@ GameObject:
   - component: {fileID: 3186660194401788754}
   - component: {fileID: 3186660194401788753}
   - component: {fileID: 3186660194401788755}
-  - component: {fileID: 3186660194401788756}
   m_Layer: 0
   m_Name: Seeker of parmesan
   m_TagString: Enemy
@@ -60053,24 +60052,6 @@ MonoBehaviour:
   MaxDist: 2147483647
   MinDist: 1
   MinAttackDist: 2
---- !u!114 &3186660194401788756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3186660194401788752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14d9369d139b9f4458cada50acae40e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coolDownTime: 1
-  isGrounded: 0
-  groundCheckDistance: 0
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &3197736566682582729
 GameObject:
   m_ObjectHideFlags: 0
