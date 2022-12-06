@@ -9,7 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public Image HealthBarSprite;
     public float maxHealth = 100;
     public float Currenthealth = 100;
-    
+    public float Damage = 20;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            TakeDamage(20);
+            TakeDamage(Damage);
         }
     }
     public void TakeDamage(float HitDamage)
