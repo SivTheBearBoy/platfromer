@@ -10,6 +10,7 @@ public class NPCinteract : MonoBehaviour
     {
         if(other.gameObject.name == "Player"){
             transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(false);
             Player.GetComponent<PlayerMovement>().enabled=false;
         }
     }
