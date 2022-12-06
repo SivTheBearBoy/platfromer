@@ -6,6 +6,7 @@ public class sc : MonoBehaviour
 {
     //Variable
     Animator anim;
+    Collider m_Collider;
 
     public GameObject player;
 
@@ -16,6 +17,10 @@ public class sc : MonoBehaviour
     public int MaxDist = 40;
     public int MinDist = 1;
     public int MinAttackDist = 2;
+
+    public float damage = 5;
+    public float maxHealth = 100;
+    public float Currenthealth = 100;
 
     void Start()
     {
@@ -46,17 +51,40 @@ public class sc : MonoBehaviour
 
             transform.localScale = scale;
 
-            //Check 
+            //Check for distance
             if (Vector3.Distance(transform.position, player.transform.position) <= MinAttackDist)
             {
                 //Voor aanvallen
-                anim.SetBool("InRange", true);
+                anim.SetBool("inRange", true);
             }
             else
             {
                 //Stoppen met aanvallen
-                anim.SetBool("InRange", false);
+                anim.SetBool("inRange", false);
+            }
+
+            //Check 
+            if (Vector3.Distance(transform.position, player.transform.position) == MinAttackDist)
+            {
+               
+                anim.SetBool("Walking", false);
             }
         }
+
+        //Health
+        void OnTriggerStay(Collider other)
+        {
+            if (other.tag == "Weapon")
+            {
+                TakeDamage(damage);
+            }
+        }
+
+
+        void TakeDamage(float HitDamage)
+        {
+            Currenthealth = Currenthealth - HitDamage;
+        }
+
     }
 }
