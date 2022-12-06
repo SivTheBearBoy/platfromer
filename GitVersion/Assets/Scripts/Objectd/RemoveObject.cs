@@ -7,7 +7,7 @@ public class RemoveObject : MonoBehaviour
   void OnTriggerEnter(Collider other)
     {
       if(other.gameObject.name == "Player"){
-        Destroy(gameObject);
+            gameObject.SetActive(false);
         }
       }
 }
