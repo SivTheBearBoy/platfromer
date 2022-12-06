@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class sc : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class sc : MonoBehaviour
     Collider m_Collider;
 
     public GameObject player;
+    public Image HealthBarSprite;
 
     public bool flip;
 
@@ -22,69 +24,81 @@ public class sc : MonoBehaviour
     public float maxHealth = 100;
     public float Currenthealth = 100;
 
+
     void Start()
     {
         //Animator een kortere naam geven
+        Currenthealth = maxHealth;
+        m_Collider = GetComponent<Collider>();
         anim = GetComponent<Animator>();
     }
     void Update()
     {
-        //Checkt of de player buiten de maximale afstand is
-        if (Vector3.Distance(transform.position, player.transform.position) <= MaxDist && (Vector3.Distance(transform.position, player.transform.position) >= MinDist))
+        if (Currenthealth >= 1)
         {
-            Vector3 scale = transform.localScale;
-            //Checkt welke kant de player is
-            if (player.transform.position.x > transform.position.x)
+            UpdateHealthBar();
+            //Checkt of de player buiten de maximale afstand is
+            if (Vector3.Distance(transform.position, player.transform.position) <= MaxDist && (Vector3.Distance(transform.position, player.transform.position) >= MinDist))
             {
-                //Als Naar Links
-                scale.z = Mathf.Abs(scale.z) * -1 * (flip ? -1 : 1);
-                transform.Translate(0, 0, speed * Time.deltaTime * -1);
-                anim.SetBool("Walking", true);
-            }
-            else
-            {
-                //Als naar rechts
-                scale.z = Mathf.Abs(scale.z) * (flip ? -1 : 1);
-                transform.Translate(0, 0, speed * Time.deltaTime);
-                anim.SetBool("Walking", true);
-            }
+                Vector3 scale = transform.localScale;
+                //Checkt welke kant de player is
+                if (player.transform.position.x > transform.position.x)
+                {
+                    //Als Naar Links
+                    scale.z = Mathf.Abs(scale.z) * -1 * (flip ? -1 : 1);
+                    transform.Translate(0, 0, speed * Time.deltaTime * -1);
+                    anim.SetBool("Walking", true);
+                }
+                else
+                {
+                    //Als naar rechts
+                    scale.z = Mathf.Abs(scale.z) * (flip ? -1 : 1);
+                    transform.Translate(0, 0, speed * Time.deltaTime);
+                    anim.SetBool("Walking", true);
+                }
 
-            transform.localScale = scale;
+                transform.localScale = scale;
 
-            //Check for distance
-            if (Vector3.Distance(transform.position, player.transform.position) <= MinAttackDist)
-            {
-                //Voor aanvallen
-                anim.SetBool("inRange", true);
-            }
-            else
-            {
-                //Stoppen met aanvallen
-                anim.SetBool("inRange", false);
-            }
+                //Check for distance
+                if (Vector3.Distance(transform.position, player.transform.position) <= MinAttackDist)
+                {
+                    //Voor aanvallen
+                    anim.SetBool("inRange", true);
+                }
+                else
+                {
+                    //Stoppen met aanvallen
+                    anim.SetBool("inRange", false);
+                }
 
-            //Check 
-            if (Vector3.Distance(transform.position, player.transform.position) == MinAttackDist)
-            {
-               
-                anim.SetBool("Walking", false);
+                //Check 
+                if (Vector3.Distance(transform.position, player.transform.position) == MinAttackDist)
+                {
+
+                    anim.SetBool("Walking", false);
+                }
             }
         }
-
-        //Health
-        void OnTriggerStay(Collider other)
+        else
         {
-            if (other.tag == "Weapon")
-            {
-                TakeDamage(damage);
-            }
+            m_Collider.enabled = false;
         }
 
-
-        void TakeDamage(float HitDamage)
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Weapon")
         {
-            Currenthealth = Currenthealth - HitDamage;
+            TakeDamage(damage);
         }
+    }
+    void TakeDamage(float HitDamage)
+    {
+        Currenthealth = Currenthealth - HitDamage;
+    }
 
+    public void UpdateHealthBar()
+    {
+        HealthBarSprite.fillAmount = Currenthealth / maxHealth;
     }
 }
