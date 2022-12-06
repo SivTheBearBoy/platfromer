@@ -69,6 +69,7 @@
                     Lazer.gameObject.SetActive(false);
                 }
             }
+            UpdateHealthBar();
         }
         else
         {
