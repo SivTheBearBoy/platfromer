@@ -74,6 +74,8 @@
         {
             anim.SetTrigger("Die");
             m_Collider.enabled = false;
+            Lazer.gameObject.SetActive(false);
+            HealthBarSprite.gameObject.SetActive(false);
         }
     }
      void OnTriggerStay(Collider other) 
