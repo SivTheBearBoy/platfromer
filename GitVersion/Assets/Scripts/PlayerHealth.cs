@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         if (Currenthealth > 0)
         {
             UpdateHealthBar();
+
         }
         else
         {
@@ -35,5 +36,17 @@ public class PlayerHealth : MonoBehaviour
     public void UpdateHealthBar()
     {
         HealthBarSprite.fillAmount = Currenthealth / maxHealth;
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            TakeDamage(20);
+        }
+    }
+    public void TakeDamage(float HitDamage)
+    {
+        Currenthealth = Currenthealth - HitDamage;
     }
 }
