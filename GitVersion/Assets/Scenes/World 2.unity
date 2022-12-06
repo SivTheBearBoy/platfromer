@@ -2063,6 +2063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hog
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5b27694cb93ea4644a42d339353bbb9c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b27694cb93ea4644a42d339353bbb9c, type: 3}
 --- !u!1001 &201546206
@@ -5260,6 +5264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3168556681990476130, guid: 15d06b288fc613841841eb32a9ae6114, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 15d06b288fc613841841eb32a9ae6114, type: 3}
       propertyPath: m_Name
       value: Slayer goblin( New animations)
@@ -8153,6 +8161,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8250283025964754918, guid: 53389fd64534555428f93e5abab83d64, type: 3}
   m_PrefabInstance: {fileID: 934967570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &864748178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3168556681990476130, guid: 15d06b288fc613841841eb32a9ae6114, type: 3}
+  m_PrefabInstance: {fileID: 510879624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &864748182
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864748178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18.008663, y: 3.2406404, z: 3.6063428}
+  m_Center: {x: -8.595006, y: 1.3524059, z: -1.1747255}
 --- !u!1001 &865978686
 PrefabInstance:
   m_ObjectHideFlags: 0
