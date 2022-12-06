@@ -11,6 +11,9 @@ public class PlayerHealth : MonoBehaviour
     public float Currenthealth = 100;
     public float Damage = 20;
 
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform respawnPoint;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            player.transform.position = respawnPoint.transform.position;
         }
         
     }
