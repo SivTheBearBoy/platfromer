@@ -11,6 +11,7 @@
 
     public GameObject player;
     public Image HealthBarSprite;
+    public GameObject Lazer;
 
     public bool flip;
     public float damage = 5;
@@ -59,11 +60,13 @@
                 {
                     //Voor aanvallen
                     anim.SetBool("Attacking", true);
+                    Lazer.gameObject.SetActive(true);
                 }
                 else
                 {
                     //Stoppen met aanvallen
                     anim.SetBool("Attacking", false);
+                    Lazer.gameObject.SetActive(false);
                 }
             }
         }
