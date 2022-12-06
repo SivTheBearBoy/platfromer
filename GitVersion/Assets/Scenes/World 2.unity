@@ -10944,7 +10944,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138462414}
-  - component: {fileID: 1138462413}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -10952,19 +10951,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1138462413
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138462412}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1138462414
 Transform:
   m_ObjectHideFlags: 0
@@ -15511,7 +15497,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1487898409}
-  - component: {fileID: 1487898408}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -15519,19 +15504,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1487898408
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487898407}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1487898409
 Transform:
   m_ObjectHideFlags: 0
@@ -23166,3 +23138,6 @@ MonoBehaviour:
   MaxDist: 40
   MinDist: 1
   MinAttackDist: 2
+  damage: 5
+  maxHealth: 100
+  Currenthealth: 100
