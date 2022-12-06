@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private Image HealthBarSprite;
+    public Image HealthBarSprite;
     public float maxHealth = 100;
     public float Currenthealth = 100;
     
@@ -14,7 +14,6 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HealthBarSprite = GetComponent<Image>();
         Currenthealth = maxHealth;
         UpdateHealthBar();
     }
