@@ -33,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             player.transform.position = respawnPoint.transform.position;
+            Currenthealth = maxHealth;
         }
         
     }
